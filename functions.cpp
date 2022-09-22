@@ -295,26 +295,3 @@ std::string checkerboard3x3(int width, int height) {
     }
     return checkerboard3x3Shape;
 }
-
-            /*if(i % 2 == 0){
-                if(remainder == 1){
-                checkerboard3x3Shape += " ";
-                }
-                else if(remainder == 2){
-                    checkerboard3x3Shape += " ";
-                }
-                else{
-                    checkerboard3x3Shape += "";
-                }
-            }
-            else{
-                if(remainder == 1){
-                checkerboard3x3Shape += "*";
-                }
-                else if(remainder == 2){
-                    checkerboard3x3Shape += "**";
-                }
-                else{
-                    checkerboard3x3Shape += "";
-                }
-            }*/
