@@ -124,35 +124,197 @@ std::string trapezoid(int width, int height) {
     return trapezoidShape;
 }
 
-
 std::string checkerboard3x3(int width, int height) {
+    
     std::string checkerboard3x3Shape;
-    //int check = 3;
-    for (int i = 0; i < height; i++){
-        if(i % 2 == 0){ //if i is equal to version of 3
-            for (int j = 0; j < width; j++){
-            if(j % 2 == 0){
-                checkerboard3x3Shape += "***";
-            }
-            else{
-                checkerboard3x3Shape += "   ";
+    int counter = (width / 3);
+    int counter2 = (height/ 3);
+    int remainder = (width % 3);
+    int remainder2 = (height % 3);
+    int check;
+    for (int i = 0; i < counter2; i++){
+        if(i % 2 == 0){
+            for (int j = 0; j < counter; j++){
+                if(j % 2 == 0){
+                    checkerboard3x3Shape += "***";
+                }
+                else{
+                    checkerboard3x3Shape += "   ";
+
             }
             
             }
+            for (int k = 0; k < remainder; k++){
+                if(check == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else{
+                    checkerboard3x3Shape += " ";
+                }
+            }
+            checkerboard3x3Shape += "\n";
+            
+            for (int j = 0; j < counter; j++){
+                if(j % 2 == 0){
+                    checkerboard3x3Shape += "***";
+                }
+                else{
+                    checkerboard3x3Shape += "   ";
+                }
+            }
+            for (int k = 0; k < remainder; k++){
+                if(check == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else{
+                    checkerboard3x3Shape += " ";
+                }
+            }
+            checkerboard3x3Shape += "\n";
+
+            for (int j = 0; j < counter; j++){
+                if(j % 2 == 0){
+                    checkerboard3x3Shape += "***";
+                }
+                else{
+                    checkerboard3x3Shape += "   ";
+                }
+            
+            }
+            for (int k = 0; k < remainder; k++){
+                if(check == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else{
+                    checkerboard3x3Shape += " ";
+                }
+            }
+        check = 1;
         }
-        else {
-            for (int j = 0; j < width; j++){
-            if(j % 2 == 0){
-                checkerboard3x3Shape += "   ";
+        else{
+            for (int j = 0; j < counter; j++){
+                if(j % 2 == 0){
+                    checkerboard3x3Shape += "   ";
+                }
+                else{
+                    checkerboard3x3Shape += "***";
+                }
             }
-            else{
-                checkerboard3x3Shape += "***";
+            for (int k = 0; k < remainder; k++){
+                if(check == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else{
+                    checkerboard3x3Shape += " ";
+                }
             }
+            checkerboard3x3Shape += "\n";
+
+            for (int j = 0; j < counter; j++){
+                if(j % 2 == 0){
+                    checkerboard3x3Shape += "   ";
+                }
+                else{
+                    checkerboard3x3Shape += "***";
+                }
             
             }
+            for (int k = 0; k < remainder; k++){
+                if(check == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else{
+                    checkerboard3x3Shape += " ";
+                }
+            }
+            checkerboard3x3Shape += "\n";
+
+            for (int j = 0; j < counter; j++){
+                if(j % 2 == 0){
+                    checkerboard3x3Shape += "   ";
+                }
+                else{
+                    checkerboard3x3Shape += "***";
+                }
+            }
+            for (int k = 0; k < remainder; k++){
+                if(check == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else{
+                    checkerboard3x3Shape += " ";
+                }
+            }        
+        check = 0;
         }
         checkerboard3x3Shape += "\n";
     }
 
+    for (int i = 0; i < remainder2; i++){
+        if(check == 0){
+            for (int j = 0; j < counter; j++){//how many horizontally
+                    if(j % 2 == 0){
+                        checkerboard3x3Shape += "***";
+                    }
+                    else{
+                        checkerboard3x3Shape += "   ";
+                        }
+                
+            }
+            for (int k = 0; k < remainder; k++){
+                if(check == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else{
+                    checkerboard3x3Shape += " ";
+                }
+            }
+            checkerboard3x3Shape += "\n";
+        }
+
+        if(check == 1){
+            for (int j = 0; j < counter; j++){//how many horizontally
+                    if(j % 2 == 0){
+                        checkerboard3x3Shape += "   ";
+                    }
+                    else{
+                        checkerboard3x3Shape += "***";
+                        }
+                
+            }
+            for (int k = 0; k < remainder; k++){
+                if(check == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else{
+                    checkerboard3x3Shape += " ";
+                }
+            }
+            checkerboard3x3Shape += "\n";
+        }
+    }
     return checkerboard3x3Shape;
 }
+
+            /*if(i % 2 == 0){
+                if(remainder == 1){
+                checkerboard3x3Shape += " ";
+                }
+                else if(remainder == 2){
+                    checkerboard3x3Shape += " ";
+                }
+                else{
+                    checkerboard3x3Shape += "";
+                }
+            }
+            else{
+                if(remainder == 1){
+                checkerboard3x3Shape += "*";
+                }
+                else if(remainder == 2){
+                    checkerboard3x3Shape += "**";
+                }
+                else{
+                    checkerboard3x3Shape += "";
+                }
+            }*/

@@ -68,6 +68,14 @@ int main()
     std::cout << checkerboard3x3(width, height);
     std::cout << "\n";
 
+    std::cout << "Example 2:" << std::endl;
+    width = 27;
+    height = 27;
+    std::cout << "Input width: " << width << std::endl;
+    std::cout << "Input height: " << height << std::endl;
+    std::cout << "Shape: " << std::endl;
+    std::cout << checkerboard3x3(width, height);
+    std::cout << "\n";
     
 
 }
